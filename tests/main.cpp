@@ -1,7 +1,7 @@
 #include <QtTest>
 
-#include "tst_testfields.cpp"
-#include "tst_testmodels.cpp"
+#include "tst_testtools.cpp"
+#include "tst_testbasefields.cpp"
 
 
 int main(int argc, char** argv)
@@ -12,8 +12,8 @@ int main(int argc, char** argv)
      delete obj;
    };
 
-   ASSERT_TEST(new TestFields());
-   ASSERT_TEST(new TestModels());
+   ASSERT_TEST(new TestTools());
+   ASSERT_TEST(new TestBaseFields());
 
    return status;
 }

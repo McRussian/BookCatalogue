@@ -6,4 +6,6 @@ CONFIG -= app_bundle
 
 TEMPLATE = app
 
-SOURCES +=  tst_testtools.cpp
+SOURCES += main.cpp \
+    tst_testtools.cpp \
+    tst_testbasefields.cpp

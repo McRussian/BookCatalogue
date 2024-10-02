@@ -41,6 +41,4 @@ void TestTools::test_capitalize_string()
     QCOMPARE("Test test", capitalize(QString("TEST TEST")));
 }
 
-QTEST_APPLESS_MAIN(TestTools)
-
 #include "tst_testtools.moc"
