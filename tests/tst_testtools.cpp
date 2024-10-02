@@ -1,3 +1,6 @@
+#ifndef TESTTOOLS_H
+#define TESTTOOLS_H
+
 #include <QtTest>
 
 // add necessary includes here
@@ -42,3 +45,5 @@ void TestTools::test_capitalize_string()
 }
 
 #include "tst_testtools.moc"
+
+#endif // DATABASE_H

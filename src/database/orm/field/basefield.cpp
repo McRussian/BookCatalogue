@@ -1,5 +1,7 @@
 #include "basefield.h"
 
+QStringList BaseField::_valid_types;
+
 BaseField::BaseField(const QString name, const QString type, const bool pk, const bool n, const bool u) :
     _field_name(name),
     _is_key(pk),

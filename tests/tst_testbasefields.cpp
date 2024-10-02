@@ -1,7 +1,10 @@
+#ifndef TESTBASEFIELD_H
+#define TESTBASEFIELD_H
+
 #include <QtTest>
 
 // add necessary includes here
-#include "../src/database/orm/field/basefield.h"
+#include "../src/database/orm/field/basefield.cpp"
 
 class TestBaseFields : public QObject
 {
@@ -78,3 +81,5 @@ void TestBaseFields::test_primary_key()
 }
 
 #include "tst_testbasefields.moc"
+
+#endif
