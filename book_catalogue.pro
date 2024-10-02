@@ -12,6 +12,12 @@ SOURCES += \
     src/database/database.cpp \
     src/database/orm/field/basefield.cpp \
     src/database/orm/model/basemodel.cpp \
+    src/gui/author_table_widget.cpp \
+    src/gui/author_widget.cpp \
+    src/models/author.cpp \
+    src/models/book.cpp \
+    src/models/field.cpp \
+ 
     src/gui/book_catalogue_window.cpp \
     src/main.cpp
 
@@ -19,9 +25,17 @@ HEADERS += \
     src/database/database.h \
     src/database/orm/field/basefield.h \
     src/database/orm/model/basemodel.h \
-    src/gui/book_catalogue_window.h
+    src/gui/author_table_widget.h \
+    src/gui/author_widget.h \
+    src/gui/book_catalogue_window.h \
+    src/models/author.h \
+    src/models/book.h \
+    src/models/field.h \
+    src/tools/tools.h
 
 FORMS += \
+    src/ui/author_table_widget.ui \
+    src/ui/author_widget.ui \
     src/ui/book_catalogue_window.ui
 
 # Default rules for deployment.

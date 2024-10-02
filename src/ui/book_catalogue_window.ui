@@ -39,8 +39,118 @@ border-color: rgb(94, 94, 94);</string>
      <height>20</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu_DataBase">
+    <property name="title">
+     <string>&amp;DataBase</string>
+    </property>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="actionXML"/>
+     <addaction name="actionJSON"/>
+    </widget>
+    <widget class="QMenu" name="menuDataBase">
+     <property name="title">
+      <string>DataBase</string>
+     </property>
+     <addaction name="actionSelect"/>
+     <addaction name="actionNew"/>
+    </widget>
+    <widget class="QMenu" name="menuBook">
+     <property name="title">
+      <string>Book</string>
+     </property>
+     <addaction name="actionNew_2"/>
+    </widget>
+    <addaction name="menuBook"/>
+    <addaction name="separator"/>
+    <addaction name="menuDataBase"/>
+    <addaction name="separator"/>
+    <addaction name="menuExport"/>
+   </widget>
+   <widget class="QMenu" name="menu_BookShelf">
+    <property name="title">
+     <string>&amp;BookShelf</string>
+    </property>
+    <addaction name="actionNew_3"/>
+    <addaction name="actionClone"/>
+    <addaction name="actionRemove"/>
+   </widget>
+   <widget class="QMenu" name="menuSearch">
+    <property name="title">
+     <string>Search</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionDocumentation"/>
+   </widget>
+   <addaction name="menu_DataBase"/>
+   <addaction name="menu_BookShelf"/>
+   <addaction name="menuSearch"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionXML">
+   <property name="text">
+    <string>XML</string>
+   </property>
+  </action>
+  <action name="actionJSON">
+   <property name="text">
+    <string>JSON</string>
+   </property>
+  </action>
+  <action name="actionSelect">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_2">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionNew_3">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionClone">
+   <property name="text">
+    <string>Clone</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="text">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
