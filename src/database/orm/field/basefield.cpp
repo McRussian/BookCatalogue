@@ -1,8 +1,10 @@
 #include "basefield.h"
 
-QStringList BaseField::_valid_types;
+template <typename T>
+QStringList BaseField<T>::_valid_types;
 
-BaseField::BaseField(const QString name, const QString type, const bool pk, const bool n, const bool u) :
+template <typename T>
+BaseField<T>::BaseField(const QString name, const QString type, const bool pk, const bool n, const bool u) :
     _field_name(name),
     _is_key(pk),
     _is_null(n),
@@ -15,19 +17,22 @@ BaseField::BaseField(const QString name, const QString type, const bool pk, cons
     this->_field_type = type.toUpper();
 }
 
-BaseField::~BaseField()
+template <typename T>
+BaseField<T>::~BaseField()
 {
 
 }
 
-void BaseField::setValidTypes(QStringList types)
+template <typename T>
+void BaseField<T>::setValidTypes(QStringList types)
 {
     if (types.empty())
         throw FieldException("List of Valid Types cannot be Empty.");
     BaseField::_valid_types = types;
 }
 
-QString BaseField::create()
+template <typename T>
+QString BaseField<T>::create()
 {
     QString pattern = "";
     pattern += this->_field_name + " " + this->_field_type;
@@ -38,7 +43,20 @@ QString BaseField::create()
     return pattern;
 }
 
-bool BaseField::is_key() const
+template <typename T>
+bool BaseField<T>::is_key() const
 {
     return _is_key;
+}
+
+template <typename T>
+const T &BaseField<T>::value() const
+{
+    return _value;
+}
+
+template <typename T>
+void BaseField<T>::setValue(const T &newValue)
+{
+    _value = newValue;
 }

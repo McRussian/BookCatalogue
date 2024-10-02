@@ -33,10 +33,10 @@ TestBaseFields::~TestBaseFields()
 void TestBaseFields::test_create_basefield()
 {
     QStringList valid_type;
-    QVERIFY_EXCEPTION_THROWN(BaseField::setValidTypes(valid_type), FieldException);
+    QVERIFY_EXCEPTION_THROWN(BaseField<std::string>::setValidTypes(valid_type), FieldException);
 
     valid_type << "INTEGER" << "TEXT";
-    BaseField::setValidTypes(valid_type);
+    BaseField<std::string>::setValidTypes(valid_type);
     QVERIFY_EXCEPTION_THROWN(BaseField("test", "test"), FieldException);
 }
 
@@ -44,6 +44,7 @@ void TestBaseFields::test_create()
 {
     QStringList valid_type;
     valid_type << "INTEGER" << "TEXT";
+    BaseField<std::string>::setValidTypes(valid_type);
     BaseField field1("test", "integer");
     QCOMPARE("test INTEGER", field1.create());
 
@@ -73,6 +74,7 @@ void TestBaseFields::test_primary_key()
 {
     QStringList valid_type;
     valid_type << "INTEGER" << "TEXT";
+    BaseField<std::string>::setValidTypes(valid_type);
     BaseField field1("test", "integer");
     QVERIFY(!field1.is_key());
 
