@@ -16,8 +16,7 @@ SOURCES += \
     src/gui/author_widget.cpp \
     src/models/author.cpp \
     src/models/book.cpp \
-    src/models/field.cpp \
- 
+    src/models/field.cpp \ 
     src/gui/book_catalogue_window.cpp \
     src/main.cpp
 

@@ -2,6 +2,7 @@
 
 #include "tst_testtools.cpp"
 #include "tst_testbasefields.cpp"
+#include "tst_testbasemodels.cpp"
 
 
 int main(int argc, char** argv)
@@ -14,6 +15,7 @@ int main(int argc, char** argv)
 
    ASSERT_TEST(new TestTools());
    ASSERT_TEST(new TestBaseFields());
+   ASSERT_TEST(new TestBaseModels());
 
    return status;
 }

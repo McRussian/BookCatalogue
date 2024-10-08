@@ -15,7 +15,6 @@ private:
     QString _message;
 };
 
-template <typename T = std::string>
 class BaseField
 {
 public:
@@ -28,8 +27,7 @@ public:
 
     bool is_key() const;
 
-    const T &value() const;
-    void setValue(const T &newValue);
+    const QString &field_name() const;
 
 private:
     static QStringList _valid_types;
@@ -38,7 +36,6 @@ private:
     bool _is_key;
     bool _is_null;
     bool _is_unique;
-    T _value;
 };
 
 #endif // BASEFIELD_H
